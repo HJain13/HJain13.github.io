@@ -1,34 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
-
-<html>
-
-<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!--Header's JS-->
-<script type="text/javascript">
-	function person(name,age){
-		this.name = name;
-		this.age = age;
-		this.untilRetire = yearsLeft; //Paranthesis is not to be included here.
-	}
-	var karan = new person("Karan Agarwal",19);
-	var himesh = new person("Himesh Jain", 19);
-	function yearsLeft(){
-		var numYears = 60 - this.age;
-		return numYears;
-	}
-</script>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
-
-<!--Body-->
 <body>
-<!--Body's JS-->
-	<script type="text/javascript">
-		document.write(himesh.name);
-		document.write("<br/>Age is: " + himesh.age + " & Years Until Retirement: ");
-		document.write(himesh.untilRetire());
-	</script>
-</body>
 
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>Basic Page</h4>
+        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
 </html>
