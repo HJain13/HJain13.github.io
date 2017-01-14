@@ -1,0 +1,234 @@
+﻿@import url(https://fonts.googleapis.com/css?family=ABeeZee); /* Fonts */
+
+/* Animations */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes dropHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.roll-in{
+	animation-name: dropHeader;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+}
+.fade-in {
+	opacity:0;
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* Basic */
+body, html {
+	margin:0;
+	padding:0
+}
+html {
+	overflow-x: hidden;
+}
+body {
+  background-color: #fff;
+  font-family: "ABeeZee", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+	font-size: 7.5vmin;
+	color: black;
+	margin-bottom: 0px;
+}
+h2 {
+	font-size: 6vmin;
+   text-align: center;
+	padding: 20px;
+}
+h3 {
+   font-size: 3.8vmin;
+}
+p {
+	font-size: 16px;
+   text-align: justify;
+}
+
+label {
+    position: relative;
+    top: 3px;
+    float: left;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+}
+a {
+   color: black;
+   text-align: center;
+}
+
+/*Envelope Shape Contents*/
+.envelope {
+	position:absolute;
+	top:60vh;
+  	border-top: 10vmax solid transparent;
+	border-left: 50vw solid #fff;
+	border-right: 50vw solid #fff;
+	width: 0px;
+	height: 15vh;
+}
+.e2 {
+	top:61vh;
+	border-left: 50vw solid #888;
+	border-right: 50vw solid #888;
+	opacity: 0.8;
+}
+.e3 {
+	top:62vh;
+	width: 1px;
+}
+hr.env{
+	width: 50vmin;
+	padding: 0;
+	text-align: center;
+	border-bottom: 8vh solid #fff;
+	border-right: 0;
+	border-left: 0;
+}
+.main-container {
+	top: 7vmax;
+   position: relative;
+	left: 0;
+   right: 0;
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	height: auto;
+}
+.full {
+	top: 7vmax;
+   width: 100%;
+   position: relative;
+   height: auto;
+}
+.blackbg {
+   background-color: black;
+   color: white;
+}
+.wrapper-center {
+    width: 95vmin;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    text-align:center;
+}
+.wrapper-center input, textarea{
+    width: 55vmin;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 6px;
+    margin: 5px;
+    margin-right: 10px;
+    background-color: #222;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+}
+.wrapper-center label {
+    position: relative;
+    float: left;
+    width: 10vmin;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: left;
+}
+#submitButton {
+    width: 40vmin;
+    height: auto;
+    margin-top: 20px;
+    color: black;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: white;
+}
+#messageForm {
+    height: 100px;
+    resize: vertical;
+}
+.banner {
+	height: 80vh;
+	background-image: url("../images/notebook.jpg");
+   background-attachment: fixed;
+	background-position: right top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: -10;
+   display: block;
+}
+.header-text{
+	position: absolute;
+	top: 35vh;
+	left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   width: 90vw;
+	color: white;
+}
+
+h1.header {
+	color: white;
+	text-align: center;
+}
+h3.header{
+	text-align: center;
+}
+/*Social Icons Properties*/
+.social {
+	font-size: 5vmax;
+   width: 80vw;
+   margin-left: auto;
+   margin-right: auto;
+   height: auto;
+   display: -webkit-flex;
+   -webkit-justify-content: space-around;
+   display: flex;
+   justify-content: space-around;
+   padding: 5vmin;
+}
+.social a:visited {
+	color: black;
+}
+.ion-social-facebook-outline:hover {
+  color: #3b5998;
+}
+.ion-social-twitter-outline:hover {
+  color: #00aced;
+}
+.ion-social-googleplus-outline:hover {
+  color: #dd4b39;
+}
+.ion-social-github-outline:hover {
+  color: #000000;
+}
+.ion-social-linkedin-outline:hover {
+  color: #007bb5;
+}
