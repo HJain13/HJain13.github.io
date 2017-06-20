@@ -1,0 +1,44 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+
+.banner {
+  height: 100%;
+  background-image: url("../images/notebook.jpg");
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+  display: block;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  height: 50px; width: 50%;
+  text-align: center;
+  color: white;
+  background: gray;
+  line-height: 50px;
+  text-decoration: none;
+  padding-bottom: 15%;
+  background-clip: content-box;
+  overflow: hidden;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  top:50px;  left: 0;
+  background-color: inherit;
+  padding-bottom: 50%;
+  width: 57.7%;
+  z-index: -1;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-30deg) skewX(30deg);
+  -ms-transform: rotate(-30deg) skewX(30deg);
+  transform: rotate(-30deg) skewX(30deg);
+}

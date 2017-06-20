@@ -55,10 +55,6 @@ html {
   padding: 0
 }
 
-html {
-
-}
-
 body {
   background-color: #fff;
   font-family: "ABeeZee", sans-serif;
@@ -121,25 +117,35 @@ a {
 
 /*Envelope Shape Contents*/
 
+.e-container {
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+  align-items: center;
+}
+
 .envelope {
   position: absolute;
   top: 60vmin;
   border-top: 10vmax solid transparent;
-  border-left: 49.36vw solid #fff;
-  border-right: 49.36vw solid #fff;
+  border-left: 50vw solid #fff;
+  border-right: 50vw solid #fff;
   width: 0px;
   height: 15vh;
+  box-sizing: border-box;
 }
 
 .e2 {
   top: 61vmin;
-  border-left: 49.36vw solid #888;
-  border-right: 49.36vw solid #888;
+  border-left: 50vw solid #888;
+  border-right: 50vw solid #888;
   opacity: 0.8;
 }
 
 .e3 {
   top: 62vmin;
+  border-left: 50vw solid #fff;
+  border-right: 50vw solid #fff;  
   width: 2px;
 }
 
@@ -181,7 +187,7 @@ hr.env {
 }
 
 .wrapper-center {
-  width: 95vmin;
+  width: 60%;
   height: auto;
   margin: 0 auto;
   padding: 30px;
@@ -329,10 +335,31 @@ h3.header {
   border-radius: 10px;
 }
 
+.wmockup {
+  width: 24vmax;
+  height: 13.5vmax;
+  position: absolute;
+  border: 1vmax solid #333;
+  border-bottom-width: 0px; 
+  border-radius: 1vmax 1vmax 0 0;
+  bottom: 20px;
+  margin: 0 20px;
+  background: #fff; 
+}
+
+.ttt {
+  background: url("../images/ttt.png");
+  background-size: cover;  
+}
+
 .marb {
   margin-bottom: 20px;
 }
 
 .white {
   color: white;
+}
+
+.right {
+  float: right;
 }
