@@ -8,6 +8,7 @@ y=w.innerHeight||e.clientHeight||g.clientHeight;
 // Get our canvas & context
 var c 	= document.getElementById("404");
 c.height = y;
+c.width = x*0.8;
 var ctx = c.getContext("2d");
 
 /* START CONFIG VARS */
