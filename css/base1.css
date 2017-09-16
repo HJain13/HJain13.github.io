@@ -10,17 +10,19 @@ body {
 .navbar {
     background-color: transparent;
 }
-span {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-}
 
 /*======================================
         Bulma Like Elements
 ======================================*/
-.bg-is-white {
-    background: #ffffff;
+.is-slate {
+    background: whitesmoke;
+}
+.is-padded {
+    padding: 10px;
+}
+.box.is-squarer {
+    border-radius: 1px;
+    
 }
 
 /*======================================
