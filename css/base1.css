@@ -5,8 +5,8 @@ body {
 }
 #ppic {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 #profile {
     background: url("../images/portfolio-background.png") whitesmoke;
@@ -22,9 +22,6 @@ body {
 /*======================================
         Bulma Like Elements
 ======================================*/
-/* .is-slate {
-    background: whitesmoke;
-} */
 .is-padded {
     padding: 10px;
 }
