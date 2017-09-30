@@ -65,3 +65,22 @@ $(document).ready(function () {
         } // End if
     });
 });
+
+/*=========================
+    Keyboard Shortcuts
+=========================*/
+var dcount = 0;
+document.addEventListener('keyup', function(event) {
+    if (event.which === 40) {
+        dcount++;
+        $('html, body').animate({
+            scrollTop: window.innerHeight*dcount
+        }, 800);
+    }
+    if (event.which === 38) {
+        dcount--;
+        $('html, body').animate({
+            scrollTop: window.innerHeight*dcount
+        }, 800);
+    }
+});
