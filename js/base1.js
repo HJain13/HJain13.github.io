@@ -16,15 +16,12 @@ TxtRotate.prototype.tick = function () {
     } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
     var that = this;
     var delta = 300 - Math.random() * 100;
     if (this.isDeleting) {
         delta /= 4;
     }
-
     if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
@@ -33,7 +30,6 @@ TxtRotate.prototype.tick = function () {
         this.loopNum++;
         delta = 500;
     }
-
     setTimeout(function () {
         that.tick();
     }, delta);
@@ -52,7 +48,20 @@ window.onload = function () {
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-    document
-        .body
-        .appendChild(css);
+    document.body.appendChild(css);
 };
+
+$(document).ready(function () {
+    $("a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
+    });
+});
