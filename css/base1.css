@@ -20,6 +20,10 @@ body {
     left: 200px;
     object-fit: cover;
 }
+#tpimg {
+    border-radius: 50%;
+    object-fit: cover;
+}
 #pcol {
     position: relative;   
     opacity: 0; 
@@ -266,3 +270,29 @@ body {
         opacity: 0;
     }
 }
+
+.content-skills {
+    margin: auto;
+    text-align: center;
+}
+
+#c {
+    margin: auto;
+}
+
+.header-skills {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    height: 25px;
+}
+
+.pentagon {
+    width: 95%;
+    max-width: 320px;
+    height: 320px;
+    margin: auto;
+    padding: 3px 3px 28px 3px;
+    display: inline-block;
+}
+  
