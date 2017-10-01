@@ -1,3 +1,6 @@
+var body = document.body, html = document.documentElement;
+var pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
 var TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -51,6 +54,7 @@ window.onload = function () {
     document.body.appendChild(css);
 };
 
+var dcount = 0;
 $(document).ready(function () {
     $("a").on('click', function (event) {
         if (this.hash !== "") {
@@ -64,23 +68,37 @@ $(document).ready(function () {
             });
         } // End if
     });
+    dcount = parseInt($(window).scrollTop()/window.innerHeight);    
+    console.log(parseInt($(window).scrollTop()/window.innerHeight));
 });
+
+var scrollPos;
+$(window).scroll(function(){
+    scrollPos = $(window).scrollTop();  
+    if (scrollPos >= $("#profile").offset().top && scrollPos < $("#profile").offset().top + window.innerHeight) {
+        $("#pcol").addClass('sOutL');
+        $("#pimg").addClass('sOutR');
+    }
+});
+
 
 /*=========================
     Keyboard Shortcuts
 =========================*/
-var dcount = 0;
 document.addEventListener('keyup', function(event) {
     if (event.which === 40) {
-        dcount++;
+        dcount = parseInt($(window).scrollTop()/window.innerHeight);            
+        if ($(window).scrollTop() < pageHeight - window.innerHeight) dcount++;
+        console.log(dcount);
         $('html, body').animate({
             scrollTop: window.innerHeight*dcount
         }, 800);
     }
     if (event.which === 38) {
-        dcount--;
+        if (dcount>0) dcount--;
         $('html, body').animate({
             scrollTop: window.innerHeight*dcount
         }, 800);
     }
 });
+

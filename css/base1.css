@@ -12,22 +12,37 @@ body {
     background: url("../images/portfolio-background.png") whitesmoke;
     background-size: 50%;
 }
+#pimg {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 2;
+    position: relative;
+    left: 200px;
+    object-fit: cover;
+}
+#pcol {
+    position: relative;   
+    opacity: 0; 
+}
+@keyframes slideOutLeft {
+    0% {left: -200px; opacity: 0}
+    100% {left: 0; opacity: 1}
+}
+@keyframes slideOutRight {
+    0% {left: 200px}
+    100% {left: 0}
+}
+.sOutL {
+    animation: slideOutLeft;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+.sOutR {
+    animation: slideOutRight;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
 
-.svg-icon {
-    width: 1em;
-    height: 1em;
-  }
-  
-  .svg-icon path,
-  .svg-icon polygon,
-  .svg-icon rect {
-    fill: #4691f6;
-  }
-  
-  .svg-icon circle {
-    stroke: #4691f6;
-    stroke-width: 1;
-  }
 
 /*======================================
             Bulma OverRides
@@ -35,16 +50,24 @@ body {
 .navbar {
     background-color: transparent;
 }
-
+.column {
+    padding: 0;
+}
 /*======================================
         Bulma Like Elements
 ======================================*/
 .is-padded {
     padding: 10px;
 }
+.is-padded-thick {
+    padding: 20px;
+}
 .box.is-squarer {
-    border-radius: 1px;
-    
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 0;
+    height: 100%;
 }
 .box.is-gapless {
     padding: 0px;
