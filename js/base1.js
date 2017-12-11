@@ -140,8 +140,8 @@ var skills = [
     },
     {
         "header" : "LANGUAGES",
-        "captions" : ["C", "HTML", "JS", "Ruby", "Java"],
-        "values" : [0.80, 0.85, 0.90, 0.70, 0.90]
+        "captions" : ["C", "HTML", "JS", "Python", "Java"],
+        "values" : [0.80, 0.9, 0.85, 0.70, 0.70]
     },
     {
         "header" : "MISC",
