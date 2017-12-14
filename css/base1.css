@@ -295,4 +295,91 @@ body {
     padding: 3px 3px 28px 3px;
     display: inline-block;
 }
-  
+
+.pcard {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px 5px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  background-color: #000000;
+}
+
+.pcard * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.pcard img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+.pcard figcaption {
+  z-index: 1;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(195, 86, 97, 0.85);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  padding: 20px 30px;;
+}
+
+.pcard figcaption:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%) rotate(45deg);
+  transform: translate(-50%, 50%) rotate(45deg);
+  position: absolute;
+}
+
+.pcard h3,
+.pcard h5 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.pcard h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pcard p {
+  font-size: 0.8rem;
+}
+
+.pcard a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.pcard:hover > img,
+.pcard.hover > img {
+  opacity: 1;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}

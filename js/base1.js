@@ -108,17 +108,17 @@ document.addEventListener('DOMContentLoaded', function () {
     Keyboard Shortcuts
 =========================*/
 document.addEventListener('keyup', function(event) {
-    if(dcount < 2) {
+    if(dcount < 3) {
         if (event.which === 40) {
             dcount = parseInt($(window).scrollTop()/window.innerHeight);            
-            if (($(window).scrollTop() < pageHeight - window.innerHeight)&&dcount<2) dcount++;
+            if (($(window).scrollTop() < pageHeight - window.innerHeight)&&dcount<3) dcount++;
             console.log(dcount);
             $('html, body').animate({
                 scrollTop: window.innerHeight*dcount
             }, 800);
         }
     }
-    if ($(window).scrollTop() < window.innerHeight*2) {
+    if ($(window).scrollTop() < window.innerHeight*3) {
         if (event.which === 38) {
             if (dcount>0) dcount--;
             $('html, body').animate({
@@ -231,3 +231,18 @@ var skills = [
     pentagonIndex++;
   });
   
+setIterativeClass();
+setInterval(function () {
+    setIterativeClass();
+}, 2000);//number of milliseconds (2000 = 2 seconds)
+
+var i = 0;
+
+function setIterativeClass() {
+    var ul = $(".container");
+    var items = ul.find(".pcard");
+    var number = items.length;
+    items.removeClass("hover");
+    items.eq(i%3).addClass("hover");
+    i++;
+}
