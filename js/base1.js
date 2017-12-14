@@ -164,7 +164,7 @@ var skills = [
   }
   
   var hue = [];
-  var hueOffset = 25;
+  var hueOffset = 100;
   
   for (var s in skills) {
     $(".content-skills").append('<div class="pentagon" id="interests"><div class="header-skills"></div><canvas class="pentCanvas"/></div>');
