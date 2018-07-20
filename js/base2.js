@@ -58,15 +58,7 @@ if (window.innerWidth < 1000) {
     $("#pcol").css("opacity",1);
 }
 
-var scrollPos;
-$(window).scroll(function(){
-    scrollPos = $(window).scrollTop();  
-    if (scrollPos >= $("#profile").offset().top && scrollPos < $("#profile").offset().top + window.innerHeight && window.innerWidth >= 1000) {
-		$("#pcol").addClass('sOutL');
-		console.log("Ho ho ho");
-        $("#pimg").addClass('sOutR');
-    }
-});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Get all "navbar-burger" elements
@@ -192,3 +184,20 @@ var skills = [
     pentagonIndex++;
   });
   
+    
+setIterativeClass();
+setInterval(function () {
+    setIterativeClass();
+}, 2000);//number of milliseconds (2000 = 2 seconds)
+
+
+  var i = 0;
+
+  function setIterativeClass() {
+      var ul = $(".container");
+      var items = ul.find(".pcard");
+      var number = items.length;
+      items.removeClass("hover");
+      items.eq(i%4).addClass("hover");
+      i++;
+  }

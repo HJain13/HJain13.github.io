@@ -3,6 +3,11 @@ html,
 body {
     font-family: 'Raleway', sans-serif;
 }
+
+.section.section-fullpage {
+    padding: 0;
+}
+
 #ppic {
     display: flex;
     justify-content: center;
