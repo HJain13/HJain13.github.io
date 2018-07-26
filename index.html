@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id="fullpage">
-		<div class="section section-fullpage fp-noscroll" id="section0" data-anchor="firstPage">
+		<div class="section section-fullpage" id="section0" data-anchor="firstPage">
 			<section class="hero is-fullheight">
 				<div class="hero-head">
 					<nav class="navbar">
@@ -174,7 +174,7 @@
 			},
 			afterLoad: function(origin, destination, direction){
 				var loadedSection = this;
-				if(origin.index == 1){
+				if(origin.index == 1 && direction == 'up'){
 					$("#pcol").removeClass('sOutL');
         			$("#pimg").removeClass('sOutR');
 				}
